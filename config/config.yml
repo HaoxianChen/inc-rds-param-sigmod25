@@ -1,0 +1,36 @@
+# config.yml 默认配置文件
+
+#gorm连接pg配置
+pg_config:
+  host: 127.0.0.1
+  port: 5432
+  user: xxxx
+  password: xxxx
+  dbname: xxxx
+  max_open_conns: 20
+  max_idle_conns: 10
+
+# 日志配置
+logger_config:
+  # 日志打印等级，[debug, info, warn, err, off]
+  level: "info"
+  # 日志存放路径，当前目录的log文件夹
+  path: "log"
+  # 最大存放时间，180天，超过180天的日志会删除
+  max_age: 180
+  # 日志分割时间，单位小时，定义168为一周
+  rotation_time: 168
+
+etcd_config:
+  endpoints:
+   - 127.0.0.1:2379
+  dial_timeout: 5
+  username:
+  password:
+  service_discovery_key: manager.rpc
+
+hdfs_config:
+  endpoint: 127.0.0.1:8020
+
+switch_config:
+  close_calc_node: true

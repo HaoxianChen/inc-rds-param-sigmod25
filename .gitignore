@@ -1,0 +1,32 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+.idea/
+.vscode/
+/storage/
+/rule_dig/storage/
+/rule_execute/storage/
+/rule_dig/log/
+/rule_execute/log/
+/log/
+/vendor/
+/outer/
+
+go.sum
+utils/predicate_regular_util/*.csv
+
+images/
+scy

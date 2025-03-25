@@ -1,0 +1,36 @@
+{
+  "dataSources": [
+    {
+      "database": "postgres",
+      "host": "127.0.0.1",
+      "port": 5432,
+      "databaseName": "xxxx",
+      "tableName": "inc_rds.hospital",
+      "user": "xxxx",
+      "password": "xxxx"
+    }
+  ],
+  "preTaskID": 1000267,
+  "preSupport": 0,
+  "preConfidence": 0,
+  "updatedSupport": 0.000001,
+  "updatedConfidence": 0.6,
+  "coverRadius": 3,
+  "recallBound": 1.0,
+  "useCDF": false,
+  "withoutSampling": false,
+  "recallRateBatchMinerTaskId": 1000268,
+  "treeLevel": 5,
+  "chanSize": 16,
+  "treeChanSize": 10,
+  "predicateSupportLimit": 0.95,
+  "topKLayer": 2,
+  "topKSize": 50,
+  "useNeighborConfs": false,
+  "cubeSize": -1,
+  "usePruneVersion": false,
+  "useDecisionTree": false,
+  "decisionTreeMaxDepth": 3,
+  "decisionTreeMaxRowSize": -1,
+  "enumSize": 50
+}

@@ -1,0 +1,128 @@
+{
+  "dataSources": [
+    {
+      "database": "postgres",
+      "host": "127.0.0.1",
+      "port": 5432,
+      "databaseName": "xxxx",
+      "tableName": "public.parksong",
+      "user": "xxxx",
+      "password": "xxxx"
+    }
+  ],
+  "preTaskID": 1000772,
+  "preSupport": -1,
+  "preConfidence": -1,
+  "updatedSupport": 0.000001,
+  "updatedConfidence": 0.7,
+  "coverRadius": 3,
+  "recallBound": 1.0,
+  "useCDF": false,
+  "withoutSampling": false,
+  "recallRateBatchMinerTaskId": 1000780,
+  "treeLevel": 4,
+  "chanSize": 16,
+  "treeChanSize": 10,
+  "predicateSupportLimit": 0.95,
+  "topKLayer": 2,
+  "topKSize": 50,
+  "useNeighborConfs": false,
+  "cubeSize": 100000,
+  "usePruneVersion": true,
+  "useDecisionTree": false,
+  "decisionTreeMaxDepth": 4,
+  "decisionTreeMaxRowSize": 10000,
+  "enumSize": 50,
+  "rhs": [
+    {
+      "leftTableIndex": 0,
+      "rightTableIndex": 0,
+      "leftTableColumn": "大头笔",
+      "rightTableColumn": "大头笔"
+    },
+    {
+      "leftTableIndex": 0,
+      "rightTableIndex": 0,
+      "leftTableColumn": "收件人详细地址",
+      "rightTableColumn": "收件人详细地址"
+    },
+    {
+      "leftTableIndex": 0,
+      "rightTableIndex": 0,
+      "leftTableColumn": "name",
+      "rightTableColumn": "name"
+    },
+    {
+      "leftTableIndex": 0,
+      "rightTableIndex": 0,
+      "leftTableColumn": "商品分类",
+      "rightTableColumn": "商品分类"
+    },
+    {
+      "leftTableIndex": 0,
+      "rightTableIndex": 0,
+      "leftTableColumn": "卖家昵称",
+      "rightTableColumn": "卖家昵称"
+    },
+    {
+      "leftTableIndex": 0,
+      "rightTableIndex": 0,
+      "leftTableColumn": "收件人姓名",
+      "rightTableColumn": "收件人姓名"
+    },
+    {
+      "leftTableIndex": 0,
+      "rightTableIndex": 0,
+      "leftTableColumn": "收件人乡镇",
+      "rightTableColumn": "收件人乡镇"
+    },
+    {
+      "leftTableIndex": 0,
+      "rightTableIndex": 0,
+      "leftTableColumn": "卖家id",
+      "rightTableColumn": "卖家id"
+    },
+    {
+      "leftTableIndex": 0,
+      "rightTableIndex": 0,
+      "leftTableColumn": "公司编号",
+      "rightTableColumn": "公司编号"
+    },
+    {
+      "leftTableIndex": 0,
+      "rightTableIndex": 0,
+      "leftTableColumn": "noise_flag",
+      "rightTableColumn": "noise_flag"
+    },
+    {
+      "leftTableIndex": 0,
+      "rightTableIndex": 0,
+      "leftTableColumn": "收件人手机号",
+      "rightTableColumn": "收件人手机号"
+    },
+    {
+      "leftTableIndex": 0,
+      "rightTableIndex": 0,
+      "leftTableColumn": "分流编号",
+      "rightTableColumn": "分流编号"
+    },
+    {
+      "leftTableIndex": 0,
+      "rightTableIndex": 0,
+      "leftTableColumn": "经度",
+      "rightTableColumn": "经度"
+    },
+    {
+      "leftTableIndex": 0,
+      "rightTableIndex": 0,
+      "leftTableColumn": "纬度",
+      "rightTableColumn": "纬度"
+    },
+    {
+      "leftTableIndex": 0,
+      "rightTableIndex": 0,
+      "leftTableColumn": "shop_id",
+      "rightTableColumn": "shop_id"
+    }
+  ]
+}

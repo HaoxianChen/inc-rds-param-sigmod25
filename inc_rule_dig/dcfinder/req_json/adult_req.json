@@ -1,0 +1,317 @@
+{
+  "singleRuleFinderInfo": {
+    "tableInfos": {
+      "tableInfoList": [
+        {
+          "columnList": [
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "age",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "workclass",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "fnlwgt",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "education",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "education-num",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "marital-status",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "occupation",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "relationship",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "race",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "sex",
+              "target": true
+            },
+            {
+              "columnType": "bigint",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "capital-gain",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "capital-loss",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "hours-per-week",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "native-country",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "income",
+              "target": true
+            }
+          ],
+          "tableDataPath": "/user/hive/warehouse/ei_dim.db/dim_mid_100005_0000",
+          "tableName": "adult",
+          "dropUselessData": false
+        }
+      ]
+    }
+  },
+  "multiRuleFinderInfo": {
+    "tableInfos": {
+      "tableInfoList": [
+        {
+          "columnList": [
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "age",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "workclass",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "fnlwgt",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "education",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "education-num",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "marital-status",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "occupation",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "relationship",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "race",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "sex",
+              "target": true
+            },
+            {
+              "columnType": "bigint",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "capital-gain",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "capital-loss",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "hours-per-week",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "native-country",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "income",
+              "target": true
+            }
+          ],
+          "tableDataPath": "/user/hive/warehouse/ei_dim.db/dim_mid_100005_0000",
+          "tableName": "adult",
+          "dropUselessData": false
+        }
+      ]
+    },
+    "modelPredicats": [
+
+    ]
+  },
+  "configurations": {
+    "topk": 10000,
+    "ftr": 0.75,
+    "maxRuleLength": 5,
+    "constantFilterRatio": 0.3,
+    "constantHighFilterRatio": 1,
+    "enumMaxSize": 50,
+    "dataSampleRatio": 1,
+    "numberOperators": "== ",
+    "constantNumOperators": "== ",
+    "cr": 0.00001
+  },
+  "resultStorePath": "/user/hive/warehouse/db_rule_discover_result.db/rule_result_1002652",
+  "batch": 1,
+  "type": 10,
+  "taskId": "100265209"
+}

@@ -1,0 +1,15 @@
+t0.education-num=t1.education-num -> t0.education=t1.education
+t0.capital-loss=t1.capital-loss ^ t0.income=t1.income ^ t0.education=t1.education ^ t0.education-num=t1.education-num -> t0.capital-gain=t1.capital-gain
+t0.education=t1.education ^ t0.age=t1.age ^ t0.income=t1.income -> t0.capital-gain=t1.capital-gain
+t0.capital-gain=t1.capital-gain -> t0.capital-loss=t1.capital-loss
+t0.income=t1.income -> t0.capital-gain=t1.capital-gain
+t0.marital-status=t1.marital-status ^ t0.relationship=t1.relationship -> t0.sex=t1.sex
+t0.income=t1.income ^ t0.marital-status=t1.marital-status ^ t0.age=t1.age ^ t0.education=t1.education -> t0.native-country=t1.native-country
+t0.race=t1.race ^ t0.income=t1.income ^ t0.hours-per-week=t1.hours-per-week -> t0.capital-loss=t1.capital-loss
+t0.fnlwgt=t1.fnlwgt ^ t0.education-num=t1.education-num -> t0.income=t1.income
+t0.capital-gain=t1.capital-gain ^ t0.native-country=t1.native-country ^ t0.sex=t1.sex ^ t0.marital-status=t1.marital-status -> t0.race=t1.race
+t0.fnlwgt=t1.fnlwgt ^ t0.education=t1.education -> t0.workclass=t1.workclass
+t0.education=Bachelors -> t0.education-num=13
+t0.workclass=noValueSetHere123156456 -> t0.occupation=noValueSetHere123156456
+t0.capital-gain>=8614 ^ t0.marital-status!=Married-civ-spouse -> t0.income=>50K
+t0.relationship=Own-child -> t0.marital-status=Never-married

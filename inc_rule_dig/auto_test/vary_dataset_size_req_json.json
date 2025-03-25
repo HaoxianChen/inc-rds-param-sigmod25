@@ -1,0 +1,67 @@
+{
+  "dataSources": [
+      {
+         "database": "postgres",
+         "host": "xxxx",
+         "port": 5432,
+         "databaseName": "xxxx",
+         "tableName": "inc_rds.aminer_author",
+         "user": "xxxx",
+         "password": "xxxx",
+         "dataLimit": 273989
+      },
+      {
+         "database": "postgres",
+         "host": "xxxx",
+         "port": 5432,
+         "databaseName": "xxxx",
+         "tableName": "inc_rds.aminer_author2paper",
+         "user": "xxxx",
+         "password": "xxxx",
+         "dataLimit": 830880
+      },
+      {
+         "database": "postgres",
+         "host": "xxxx",
+         "port": 5432,
+         "databaseName": "xxxx",
+         "tableName": "inc_rds.aminer_paper",
+         "user": "xxxx",
+         "password": "xxxx",
+         "dataLimit": 334777
+      },
+      {
+         "database": "postgres",
+         "host": "xxxx",
+         "port": 5432,
+         "databaseName": "xxxx",
+         "tableName": "inc_rds.dblp",
+         "user": "xxxx",
+         "password": "xxxx",
+         "dataLimit": 33280
+      }
+  ],
+  "preTaskID": 1000772,
+  "preSupport": -1,
+  "preConfidence": -1,
+  "updatedSupport": 0.000001,
+  "updatedConfidence": 0.7,
+  "coverRadius": 3,
+  "recallBound": 1.0,
+  "useCDF": false,
+  "withoutSampling": false,
+  "recallRateBatchMinerTaskId": 1000780,
+  "treeLevel": 4,
+  "chanSize": 16,
+  "treeChanSize": 10,
+  "predicateSupportLimit": 0.95,
+  "topKLayer": 2,
+  "topKSize": 50,
+  "useNeighborConfs": false,
+  "cubeSize": -1,
+  "usePruneVersion": true,
+  "useDecisionTree": true,
+  "decisionTreeMaxDepth": 4,
+  "decisionTreeMaxRowSize": -1,
+  "enumSize": 50
+}

@@ -1,0 +1,533 @@
+{
+  "singleRuleFinderInfo": {
+    "tableInfos": {
+      "tableInfoList": [
+        {
+          "columnList": [
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "id",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "分流编号",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "卖家id",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "单号",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "bizid",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "卖家昵称",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "大头笔",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "公司编号",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "收件人姓名",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "收件人手机号",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "收件人详细地址",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "收件人省份",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "收件人城市",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "收件人区域",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "收件人乡镇",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "日期",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "订单创建时间",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "geohash",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "经度",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "纬度",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "商品分类",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "shop_id",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "maijiaid",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "customer_id",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "name",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "phone",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "noise_flag",
+              "target": true
+            }
+          ],
+          "tableDataPath": "/user/hive/warehouse/ei_dim.db/dim_mid_100015_0000",
+          "tableName": "parksong_200w",
+          "dropUselessData": false
+        }
+      ]
+    }
+  },
+  "multiRuleFinderInfo": {
+    "tableInfos": {
+      "tableInfoList": [
+        {
+          "columnList": [
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "id",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "分流编号",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "卖家id",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "单号",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "bizid",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "卖家昵称",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "大头笔",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "公司编号",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "收件人姓名",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "收件人手机号",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "收件人详细地址",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "收件人省份",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "收件人城市",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "收件人区域",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "收件人乡镇",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "日期",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "订单创建时间",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "geohash",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "经度",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "纬度",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "商品分类",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "shop_id",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "maijiaid",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "customer_id",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "name",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "phone",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "noise_flag",
+              "target": true
+            }
+          ],
+          "tableDataPath": "/user/hive/warehouse/ei_dim.db/dim_mid_100015_0000",
+          "tableName": "parksong_200w",
+          "dropUselessData": false
+        }
+      ]
+    },
+    "modelPredicats": [
+
+    ]
+  },
+  "configurations": {
+    "topk": 10000,
+    "ftr": 0.75,
+    "maxRuleLength": 5,
+    "constantFilterRatio": 0.3,
+    "constantHighFilterRatio": 1,
+    "enumMaxSize": 50,
+    "dataSampleRatio": 1,
+    "numberOperators": "== ",
+    "constantNumOperators": "== ",
+    "cr": 0.00001
+  },
+  "resultStorePath": "/user/hive/warehouse/db_rule_discover_result.db/rule_result_1002652",
+  "batch": 1,
+  "type": 10,
+  "taskId": "100265209"
+}

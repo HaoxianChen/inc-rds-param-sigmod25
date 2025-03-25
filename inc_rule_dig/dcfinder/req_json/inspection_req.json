@@ -1,0 +1,353 @@
+{
+  "singleRuleFinderInfo": {
+    "tableInfos": {
+      "tableInfoList": [
+        {
+          "columnList": [
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "inspection_id",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "dba_name",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "aka_name",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "license",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "facility_type",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "risk",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "address",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "city",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "state",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "zip",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "inspection_date",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "inspection_type",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "results",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "violations",
+              "target": true
+            },
+            {
+              "columnType": "double",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "latitude",
+              "target": true
+            },
+            {
+              "columnType": "double",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "longitude",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "location",
+              "target": true
+            }
+          ],
+          "tableDataPath": "/user/hive/warehouse/ei_dim.db/dim_mid_100009_0000",
+          "tableName": "inspection",
+          "dropUselessData": false
+        }
+      ]
+    }
+  },
+  "multiRuleFinderInfo": {
+    "tableInfos": {
+      "tableInfoList": [
+        {
+          "columnList": [
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "inspection_id",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "dba_name",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "aka_name",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "license",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "facility_type",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "risk",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "address",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "city",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "state",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "zip",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "inspection_date",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "inspection_type",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "results",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "violations",
+              "target": true
+            },
+            {
+              "columnType": "double",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "latitude",
+              "target": true
+            },
+            {
+              "columnType": "double",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "longitude",
+              "target": true
+            },
+            {
+              "columnType": "varchar",
+              "fkMsgList": [
+
+              ],
+              "skip": false,
+              "columnName": "location",
+              "target": true
+            }
+          ],
+          "tableDataPath": "/user/hive/warehouse/ei_dim.db/dim_mid_100009_0000",
+          "tableName": "inspection",
+          "dropUselessData": false
+        }
+      ]
+    },
+    "modelPredicats": [
+
+    ]
+  },
+  "configurations": {
+    "topk": 10000,
+    "ftr": 0.75,
+    "maxRuleLength": 5,
+    "constantFilterRatio": 0.3,
+    "constantHighFilterRatio": 1,
+    "enumMaxSize": 50,
+    "dataSampleRatio": 1,
+    "numberOperators": "== ",
+    "constantNumOperators": "== ",
+    "cr": 0.00001
+  },
+  "resultStorePath": "/user/hive/warehouse/db_rule_discover_result.db/rule_result_1002654",
+  "batch": 1,
+  "type": 10,
+  "taskId": "100265400"
+}
