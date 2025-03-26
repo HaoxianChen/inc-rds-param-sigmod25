@@ -1,74 +1,73 @@
 #### 1.incremental_rds_parameter_updates_release
 
-​    在本研究中开发的参数更新下的增量规则发现算法
+    Incremental rule discovery algorithm under parameter updates developed in this study
 
-#### 2.算法入口函数
+#### 2.Algorithm Entry Function
 
 rule_dig/inc_rule_dig.go 
 
-​	-- rule_dig.IncDigRulesDistribute()  // 增量规则发现的入口函数
+    -- rule_dig.IncDigRulesDistribute()  // Entry point for incremental rule discovery
 
-​		-- batchMiner()                    // batch
+        -- batchMiner()                    // batch
 
-​        -- incMinerSupport()		  // support更新，confidence不变
+        -- incMinerSupport()               // update support, confidence remains unchanged
 
-​		-- incMinerConfidence()	// confidence更新，support不变
+        -- incMinerConfidence()            // update confidence, support remains unchanged
 
-​		-- incMinerIndicator()		// support、confidence同时更新
+        -- incMinerIndicator()             // update both support and confidence simultaneously
 
-#### 3.运行增量算法
+#### 3. Running the Incremental Algorithm
 
-##### 3.1需要安装的组件
+##### 3.1 Required Components
 
-| 组件名称   | 版本   |
-| ---------- | ------ |
-| PostgreSQL | 9.6.24 |
-| etcd       | 3.5.6  |
-| Golang     | 1.19   |
+| Component Name | Version  |
+| -------------- | -------- |
+| PostgreSQL     | 9.6.24   |
+| etcd           | 3.5.6    |
+| Golang         | 1.19     |
 
-##### 3.2初始化sql脚本
+##### 3.2 Initialization SQL Script
 
-​	安装好PostgreSQL数据库后，运行init_sql/init_sql.sql脚本，初始化数据库表。
+	After installing the PostgreSQL database, run the init_sql/init_sql.sql script to initialize the database tables.
 
-##### 3.3部署api、manager镜像
+##### 3.3 Deploying API and Manager Images
 
-​	相关镜像、配置在images目录下
+Related images and configurations are located in the images directory
 
 ```
-# 创建api-etc、api-log、manager-etc、manager-log目录
+# Create directories: api-etc, api-log, manager-etc, manager-log
 mkdir api-etc api-log manager-etc manager-log
 
-# 把api-api.yaml放到api-etc目录下
+# Copy api-api.yaml to the api-etc directory
 cp api-api.yaml api-etc/
 
-# 把manager.yaml、rock_config.yml放到manager-etc目录下
+# Copy manager.yaml and rock_config.yml to the manager-etc directory
 cp manager.yaml rock_config.yml manager-etc/
 ```
 
-​	修改配置文件
+Modify configuration files
 
 ```
-# 编辑api-api.yaml文件
-修改Etcd.Hosts项，按实际填写etcd的ip和port
+# Edit the api-api.yaml file
+Modify the Etcd.Hosts entry, filling in the actual etcd IP and port
+
+```
+# Edit the manager.yaml file
+1. Modify the Etcd.Hosts entry, filling in the actual etcd IP and port
+2. Modify the Host, Port, User, Password, and Database under Pg, filling in the actual values
+3. Modify the RockEtcd.Endpoints entry, filling in the actual etcd IP and port
+4. Modify the RockCluster.Ssh.Hosts entry, specifying the IP of the running node, filling in the actual value
+5. Modify the RockCluster.Ssh.User entry, the server node username (all nodes must have the same username), filling in the actual value
+6. Modify the RockCluster.Ssh.Password entry, the server node password (all nodes must have the same password), filling in the actual value
 ```
 
 ```
-# 编辑manager.yaml文件
-1.修改Etcd.Hosts项，按实际填写etcd的ip和port
-2.修改Pg下的Host、Port、User、Password、Database，按实际填写
-3.修改RockEtcd.Ednpoints项，按实际填写etcd的ip和port
-4.修改RockCluster.Ssh.Hosts项，此处指定运行节点的ip，按实际填写
-5.修改RockCluster.Ssh.User项，服务器节点用户名，各个节点用户名需保持一致，按实际填写
-6.修改RockCluster.Ssh.Password项，服务器节点密码，各个节点密码需保持一致，按实际填写
+# Edit the rock_config.yml file
+1. Modify the host, port, user, password, and dbname under pg_config, filling in the actual values
+2. Modify the etcd_config.endpoints entry, filling in the actual etcd IP and port
 ```
 
-```
-# 编辑rock_config.yml文件
-1.修改pg_config下的host、port、user、password、dbname，按实际填写
-2.修改etcd_config.endpoints项，按实际填写etcd的ip和port
-```
-
-​	加载api、manager的镜像
+Load the API and Manager images
 
 ```
 docker load -i api_image.tar
@@ -77,31 +76,33 @@ docker load -i manager_image.tar
 docker images
 ```
 
-​	部署manager、api
+Deploy manager and API
 
 ```
-# 部署manager
+# Deploy manager
 docker run -d --privileged=true --volume=./manager-log:/app/logs --volume=./manager-etc:/app/etc --net=host manager_image:v1.0
-# 部署api
+# Deploy API
 docker run -d --privileged=true --volume=./api-log:/app/logs --volume=./api-etc:/app/etc --net=host api_image:v1.0
+
+##### 3.4 Deploying the Storage Image
+
+The related image is located in the images directory
+
 ```
-
-##### 3.4部署storage镜像
-
-​	相关镜像在images目录下
-
-```
-# 加载镜像
+# Load the image
 docker load -i storage_image.tar
-# 把镜像推到本地镜像仓库
-执行docker tag，按实际本地镜像仓库地址重新命令镜像
-执行docker push，把新命名的镜像推送到自己的本地镜像仓库
+# Push the image to the local image repository
+Execute docker tag to rename the image according to the actual local image repository address
+Execute docker push to push the newly tagged image to your local image repository
 ```
 
-​	按以下命令部署storage，其中：ip为部署的服务器的ip地址，userId任意正整数(如：123、196等)，image_path本地镜像仓库中storage的镜像路径。
+Deploy storage using the following command, where:
+- **ip** is the IP address of the deployment server
+- **userId** is any positive integer (e.g., 123, 196, etc.)
+- **image_path** is the storage image path in your local image repository
 
 ```
-# 部署命令
+# Deployment command
 curl -X POST http://{ip}:8889/create-task \
    -H "Content-Type: application/json" \
    -d '{
@@ -110,13 +111,12 @@ curl -X POST http://{ip}:8889/create-task \
       "deployType": 0,
       "dockerImage": "{image_path}"
      }'
-```
 
-​	如果想要停止容器并重新部署，按以下命令执行，其中：ip、taskId根据实际部署情况填写。
+If you want to stop the container and redeploy, execute the following command, where **ip** and **taskId** should be filled in based on the actual deployment.
 
 ```
-# 停止命令
-服务器上查看storage的容器NAMES:196-5-593-4793,196是userId,5是taskType,593是taskId,4793是编号,
+# Stop command
+Check the storage container NAMES on the server: 196-5-593-4793, where 196 is the userId, 5 is the taskType, 593 is the taskId, and 4793 is the identifier.
 curl -X POST http://{ip}:8889/close-task \
    -H "Content-Type: application/json" \
    -d '{
@@ -125,21 +125,24 @@ curl -X POST http://{ip}:8889/close-task \
      }'
 ```
 
-##### 3.5部署reeminer镜像
+##### 3.5 Deploying the reeminer Image
 
-​	打包reeminer镜像
+Package the reeminer image
 
 ```
-# image_name镜像名称，tag镜像tag标签，Dockerfile工程的根目录下的Dockerfile文件
+# [image_name] is the image name, [tag] is the tag label, and the Dockerfile is located in the project's root directory
 docker build -t [image_name]:[tag] -f Dockerfile .
-# 推送镜像到本地镜像仓库
-docker push [image_name]:[tag] 
+# Push the image to the local image repository
+docker push [image_name]:[tag]
 ```
 
-​	按以下命令部署reeminer，其中：ip为部署的服务器的ip地址，userId必须保持和storage的userId一致，否则容器启动失败，image_path本地镜像仓库中reeminer的镜像路径。
+Deploy reeminer using the following command, where:
+- **ip** is the IP address of the deployment server
+- **userId** must be the same as the one used for storage (otherwise, the container will fail to start)
+- **image_path** is the reeminer image path in your local image repository
 
 ```
-# 部署命令
+# Deployment command
 curl -X POST http://{ip}:8889/create-task \
    -H "Content-Type: application/json" \
    -d '{
@@ -150,11 +153,11 @@ curl -X POST http://{ip}:8889/create-task \
      }'
 ```
 
- 	如果想要停止容器并重新部署，按以下命令执行，其中：ip、taskId根据实际部署情况填写。
+If you want to stop the container and redeploy, execute the following command, where **ip** and **taskId** should be filled in based on the actual deployment.
 
 ```
-# 停止命令
-服务器上查看reeMiner的容器NAMES:196-1-594-4603,196是userId,1是taskType,594是taskId,4603是编号,
+# Stop command
+Check the reeminer container NAMES on the server: 196-1-594-4603, where 196 is the userId, 1 is the taskType, 594 is the taskId, and 4603 is the identifier.
 curl -X POST http://{ip}:8889/close-task \
    -H "Content-Type: application/json" \
    -d '{
@@ -163,36 +166,36 @@ curl -X POST http://{ip}:8889/close-task \
      }'
 ```
 
-##### 3.6执行任务
+##### 3.6 Executing the Task
 
-(1)导入数据集到PostgreSQL数据库
+1. **Import the dataset into the PostgreSQL database**
 
-(2)修改配置
+2. **Modify configuration**
 
-​	脚本目录inc_rule_dig/auto_test/auto_test.py、auto_test_vary_d_large.py
+   The scripts are located in `inc_rule_dig/auto_test/auto_test.py` and `auto_test_vary_d_large.py`.
 
-​	需要修改脚本main方法中的ip和port，获取reeminer服务的ip和port方法如下：
+   Modify the **ip** and **port** values in the main method of the script. Use the following command to obtain the reeminer service's **ip** and **port**:
 
 ```
-# 在部署了etcd服务器上执行
+# Execute on the deployed etcd server
 etcdctl get --prefix rock/{userId}/task/1
-# 执行上述命令后，类似输出下面的信息
+# Example output:
 rock/196/task/1/602/1/196-1-602-4467
 {"TaskId":602,"Type":1,"Status":2,"Stage":0,"RetryCnt":0,"LeaseId":"47c9904828ad6000","IP":"172.165.14.50","Port":19124,"GrpcPort":20000,"TcpPort":30000}
 rock/196/task/1/602/2/196-1-602-1257
 {"TaskId":602,"Type":1,"Status":2,"Stage":0,"RetryCnt":0,"LeaseId":"47c9904828ad6070","IP":"172.165.14.47","Port":19124,"GrpcPort":20000,"TcpPort":30000}
 rock/196/task/1/602/2/196-1-602-2128
 {"TaskId":602,"Type":1,"Status":2,"Stage":0,"RetryCnt":0,"LeaseId":"47c9904828ad6052","IP":"172.165.14.45","Port":19124,"GrpcPort":20000,"TcpPort":30000}
-......
+...
 
-# 从输出中选择集群任意一个节点
-获取一组ip和port，如：ip:172.165.14.50，port:19124
+# Choose any node from the output
+Example: IP: 172.165.14.50, Port: 19124
 ```
 
-​	修改inc_rule_dig/auto_test/*.json文件中的dataSources配置项，reeminer服务会根据dataSources配置项加载数据库中的数据
+Modify the `dataSources` configuration in `inc_rule_dig/auto_test/*.json`. The reeminer service will load database data based on this configuration:
 
 ```
-# dataSources配置项
+# dataSources configuration
   "dataSources": [
     {
       "database": "postgres",
@@ -204,13 +207,11 @@ rock/196/task/1/602/2/196-1-602-2128
       "password": "xxxx"
     }
   ],
-  
-根据(1)中PostgreSQL实际配置信息修改host、port、databaseName、user和password项
 ```
 
-​	修改inc_rule_dig/auto_test/*.xlsx文件，这里配置实际的实验参数，注意dataset name列，填写数据集在PostgreSQL实际的表名(eg: inc_rds.hospital)
+Modify **host, port, databaseName, user,** and **password** according to your actual PostgreSQL configuration.
 
-(3) 直接运行上述python脚本
+Modify the `inc_rule_dig/auto_test/*.xlsx` file to set the actual experiment parameters. **Ensure that the dataset name column contains the actual table name in PostgreSQL (e.g., `inc_rds.hospital`).**
 
-
+3. **Run the Python scripts directly**
 
