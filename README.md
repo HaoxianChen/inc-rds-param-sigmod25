@@ -1,3 +1,9 @@
+# Incremental Rule Discovery in Response to Parameter Updates
+
+This is the repository for the SIGMOD 25 paper titled "Incremental Rule Discovery in Response to Parameter Updates". 
+The full version of the paper is at [technical-report/full.pdf](technical-report/full.pdf). 
+The rest of this document contains instructions to rerun the experiments.
+
 #### 1.incremental_rds_parameter_updates_release
 
     Incremental rule discovery algorithm under parameter updates developed in this study
