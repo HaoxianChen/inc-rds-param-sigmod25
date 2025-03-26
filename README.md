@@ -52,6 +52,8 @@ Modify configuration files
 Modify the Etcd.Hosts entry, filling in the actual etcd IP and port
 
 ```
+
+```
 # Edit the manager.yaml file
 1. Modify the Etcd.Hosts entry, filling in the actual etcd IP and port
 2. Modify the Host, Port, User, Password, and Database under Pg, filling in the actual values
@@ -83,6 +85,7 @@ Deploy manager and API
 docker run -d --privileged=true --volume=./manager-log:/app/logs --volume=./manager-etc:/app/etc --net=host manager_image:v1.0
 # Deploy API
 docker run -d --privileged=true --volume=./api-log:/app/logs --volume=./api-etc:/app/etc --net=host api_image:v1.0
+```
 
 ##### 3.4 Deploying the Storage Image
 
@@ -111,6 +114,7 @@ curl -X POST http://{ip}:8889/create-task \
       "deployType": 0,
       "dockerImage": "{image_path}"
      }'
+```
 
 If you want to stop the container and redeploy, execute the following command, where **ip** and **taskId** should be filled in based on the actual deployment.
 
@@ -118,7 +122,6 @@ If you want to stop the container and redeploy, execute the following command, w
 # Stop command
 Check the storage container NAMES on the server: 196-5-593-4793, where 196 is the userId, 5 is the taskType, 593 is the taskId, and 4793 is the identifier.
 
-```
 curl -X POST http://{ip}:8889/close-task \
    -H "Content-Type: application/json" \
    -d '{
