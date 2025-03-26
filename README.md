@@ -117,6 +117,8 @@ If you want to stop the container and redeploy, execute the following command, w
 ```
 # Stop command
 Check the storage container NAMES on the server: 196-5-593-4793, where 196 is the userId, 5 is the taskType, 593 is the taskId, and 4793 is the identifier.
+
+```
 curl -X POST http://{ip}:8889/close-task \
    -H "Content-Type: application/json" \
    -d '{
